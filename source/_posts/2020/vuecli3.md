@@ -339,7 +339,7 @@ vue.config.js是一个可选的配置文件，如果项目根目录中存在这�
 
 # 七 关于打包后请求数量的有坏蛋Preload and Prefetch
 首先看一张图
-![network](vuecli3/network.webp)
+![network](vuecli3/network.jpg)
 
 从图中可以看到首次加载的资源非常多，有217个请求，??????
 查看[官方文档](https://cli.vuejs.org/zh/guide/html-and-static-assets.html#%E6%8F%92%E5%80%BC)，可以得知：
