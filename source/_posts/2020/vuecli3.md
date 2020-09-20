@@ -341,7 +341,7 @@ vue.config.js是一个可选的配置文件，如果项目根目录中存在这�
 首先看一张图
 ![network](vuecli3/network.jpg)
 
-从图中可以看到首次加载的资源非常多，有217个请求，??????
+从图中可以看到首次加载的资源非常多，有很多个请求，??????
 查看[官方文档](https://cli.vuejs.org/zh/guide/html-and-static-assets.html#%E6%8F%92%E5%80%BC)，可以得知：
 ```html
     <link rel="preload"> 是一种 resource hint，用来指定页面加载后很快会被用到的资源，所以在页面加载的过程中，我们希望在浏览器开始主体渲染之前尽早 preload。

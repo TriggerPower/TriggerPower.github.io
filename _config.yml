@@ -5,9 +5,9 @@
 # Site
 title: TriggerPower
 subtitle: ''
-description: ''
+description: 'triggerpower的博客'
 keywords:
-author: PENGYU
+author: TriggerPower
 language: zh-CN
 timezone: ''
 
@@ -106,3 +106,25 @@ deploy:
   type: git
   repository: git@github.com:TriggerPower/triggerpower.github.io.git
   branch: master
+
+# hexo-neat
+# 博文压缩
+neat_enable: true
+# 压缩html
+neat_html:
+  enable: true
+  exculde: #排除的文件
+# 压缩css 跳过min.css
+neat_css:
+  enable: true
+  exclude: 
+# 压缩js 跳过min.js
+neat_js:
+  enable: true
+  mangle: true
+  output:
+  compress:
+  exclude: 
+# 压缩博文配置结束
+# 注意上面的路径 **/* ,需要自己去配置正确的路径。，不然生成的是空白页面，当然你也可以删掉，全部压缩。
+
