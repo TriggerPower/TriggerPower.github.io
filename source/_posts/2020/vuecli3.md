@@ -1,13 +1,13 @@
 ---
 title: vuecli3
 date: 2020-09-18 11:12:35
-tags: [前端, vue]
-category: vue
+tags: [vue, vue-cli]
+category: 前端
 ---
 总结一下vue-cli@3.0脚手架的使用及其配置.
 
 # 一、安装
-1. 下载安装node,登录[node官网](https://nodejs.org/en/download/),选中合适的node版本进行安装;
+1. 下载安装node,登录[node官网](https://nodejs.org/en/download/)，选中合适的node版本进行安装;
 2. 安装vue-cli脚手架工具
 
 ```bash

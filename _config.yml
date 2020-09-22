@@ -128,3 +128,9 @@ neat_js:
 # 压缩博文配置结束
 # 注意上面的路径 **/* ,需要自己去配置正确的路径。，不然生成的是空白页面，当然你也可以删掉，全部压缩。
 
+# 本地搜索
+search:
+  path: search.xml
+  field: post
+  format: html
+  limit: 10000
