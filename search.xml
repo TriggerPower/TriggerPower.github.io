@@ -19,9 +19,31 @@
 ]]></content>
   </entry>
   <entry>
+    <title>live-sass-compiler</title>
+    <url>/2020/09/20/live-sass-compiler/</url>
+    <content><![CDATA[<p>vscode live-sass-complier插件, 能够实时将sass/scss编译成css</p>
+<h2 id="打开vscode应用商店，输入Live-Sass-Complier，搜索并安装"><a href="#打开vscode应用商店，输入Live-Sass-Complier，搜索并安装" class="headerlink" title="打开vscode应用商店，输入Live Sass Complier，搜索并安装"></a>打开vscode应用商店，输入Live Sass Complier，搜索并安装</h2><p><img src="/2020/09/20/live-sass-compiler/live-sass-complier.png" alt="livesasscomplier"></p>
+<h2 id="在自己的项目根目录-vscode-settings-json中添加如下配置信息，也可以添加到vscode的全局配置settings-json中"><a href="#在自己的项目根目录-vscode-settings-json中添加如下配置信息，也可以添加到vscode的全局配置settings-json中" class="headerlink" title="在自己的项目根目录 .vscode/settings.json中添加如下配置信息，也可以添加到vscode的全局配置settings.json中"></a>在自己的项目根目录 .vscode/settings.json中添加如下配置信息，也可以添加到vscode的全局配置settings.json中</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;liveServer.settings.port&quot;</span>: <span class="number">5501</span>,</span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.formats&quot;</span>:[</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//css输出模式 expanded展开的多行css代码，compact简洁格式的css代码，</span></span><br><span class="line">            <span class="comment">//           compressed压缩后的css代码，nested嵌套缩进的css代码</span></span><br><span class="line">            <span class="attr">&quot;format&quot;</span>: <span class="string">&quot;compress&quot;</span>,</span><br><span class="line">            <span class="comment">//输出文件拓展名 .css  .min.css  .wxss</span></span><br><span class="line">            <span class="attr">&quot;extensionName&quot;</span>: <span class="string">&quot;.css&quot;</span>,</span><br><span class="line">            <span class="comment">//指定输出目录</span></span><br><span class="line">            <span class="attr">&quot;savePath&quot;</span>: <span class="string">&quot;public/css&quot;</span>   </span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//是否生成map文件</span></span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.generateMap&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">//处理浏览器兼容性样式</span></span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.autoprefix&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;&gt;1%&quot;</span>,</span><br><span class="line">        <span class="string">&quot;last 2 versions&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//排除编译某些css</span></span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.excludeList&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;**/node_modules/**&quot;</span>,</span><br><span class="line">        <span class="string">&quot;.vscode/**&quot;</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>如果没有指定编译文件，会默认编译所有可以编译的sass/scss文件，如果只想单独编译某一个文件，可以在excludeList中设置不编译所有文件夹子。</p>
+<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.excludeList&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;**&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//指定编译某些文件</span></span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.includeItems&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;public/css/index.scss&quot;</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h2 id="编译（停止编译）文件"><a href="#编译（停止编译）文件" class="headerlink" title="编译（停止编译）文件"></a>编译（停止编译）文件</h2><blockquote>
+<p>ctrl + shift + p 输入Live Sass: Watch Sass开始进行实时编译，<br>                 输入Live Sass: Stop Watching Sass停止实时编译，<br>                 输入Live Sass: Compile Sass - Without Watch Mode进行一次编译<br>或者在vscode底部控制栏点击 watch sass进行编译</p>
+</blockquote>
+]]></content>
+      <categories>
+        <category>前端</category>
+      </categories>
+      <tags>
+        <tag>vscode</tag>
+        <tag>sass</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>vuecli3</title>
     <url>/2020/09/18/vuecli3/</url>
-    <content><![CDATA[<p>总结一下<a href="mailto:&#x76;&#x75;&#x65;&#x2d;&#x63;&#x6c;&#x69;&#64;&#x33;&#x2e;&#48;">&#x76;&#x75;&#x65;&#x2d;&#x63;&#x6c;&#x69;&#64;&#x33;&#x2e;&#48;</a>脚手架的使用及其配置.</p>
+    <content><![CDATA[<p>总结一下<a href="mailto:&#x76;&#x75;&#x65;&#45;&#99;&#108;&#105;&#x40;&#x33;&#46;&#x30;">&#x76;&#x75;&#x65;&#45;&#99;&#108;&#105;&#x40;&#x33;&#46;&#x30;</a>脚手架的使用及其配置.</p>
 <h1 id="一、安装"><a href="#一、安装" class="headerlink" title="一、安装"></a>一、安装</h1><ol>
 <li>下载安装node,登录<a href="https://nodejs.org/en/download/">node官网</a>，选中合适的node版本进行安装;</li>
 <li>安装vue-cli脚手架工具</li>
@@ -100,28 +122,6 @@
       <tags>
         <tag>vue</tag>
         <tag>vue-cli</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>live-sass-compiler</title>
-    <url>/2020/09/20/live-sass-compiler/</url>
-    <content><![CDATA[<p>vscode live-sass-complier插件, 能够实时将sass/scss编译成css</p>
-<h2 id="打开vscode应用商店，输入Live-Sass-Complier，搜索并安装"><a href="#打开vscode应用商店，输入Live-Sass-Complier，搜索并安装" class="headerlink" title="打开vscode应用商店，输入Live Sass Complier，搜索并安装"></a>打开vscode应用商店，输入Live Sass Complier，搜索并安装</h2><p><img src="/2020/09/20/live-sass-compiler/live-sass-complier.png" alt="livesasscomplier"></p>
-<h2 id="在自己的项目根目录-vscode-settings-json中添加如下配置信息，也可以添加到vscode的全局配置settings-json中"><a href="#在自己的项目根目录-vscode-settings-json中添加如下配置信息，也可以添加到vscode的全局配置settings-json中" class="headerlink" title="在自己的项目根目录 .vscode/settings.json中添加如下配置信息，也可以添加到vscode的全局配置settings.json中"></a>在自己的项目根目录 .vscode/settings.json中添加如下配置信息，也可以添加到vscode的全局配置settings.json中</h2><figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;liveServer.settings.port&quot;</span>: <span class="number">5501</span>,</span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.formats&quot;</span>:[</span><br><span class="line">        &#123;</span><br><span class="line">            <span class="comment">//css输出模式 expanded展开的多行css代码，compact简洁格式的css代码，</span></span><br><span class="line">            <span class="comment">//           compressed压缩后的css代码，nested嵌套缩进的css代码</span></span><br><span class="line">            <span class="attr">&quot;format&quot;</span>: <span class="string">&quot;compress&quot;</span>,</span><br><span class="line">            <span class="comment">//输出文件拓展名 .css  .min.css  .wxss</span></span><br><span class="line">            <span class="attr">&quot;extensionName&quot;</span>: <span class="string">&quot;.css&quot;</span>,</span><br><span class="line">            <span class="comment">//指定输出目录</span></span><br><span class="line">            <span class="attr">&quot;savePath&quot;</span>: <span class="string">&quot;public/css&quot;</span>   </span><br><span class="line">        &#125;</span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//是否生成map文件</span></span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.generateMap&quot;</span>: <span class="literal">true</span>,</span><br><span class="line">    <span class="comment">//处理浏览器兼容性样式</span></span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.autoprefix&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;&gt;1%&quot;</span>,</span><br><span class="line">        <span class="string">&quot;last 2 versions&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//排除编译某些css</span></span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.excludeList&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;**/node_modules/**&quot;</span>,</span><br><span class="line">        <span class="string">&quot;.vscode/**&quot;</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<p>如果没有指定编译文件，会默认编译所有可以编译的sass/scss文件，如果只想单独编译某一个文件，可以在excludeList中设置不编译所有文件夹子。</p>
-<figure class="highlight json"><table><tr><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.excludeList&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;**&quot;</span></span><br><span class="line">    ],</span><br><span class="line">    <span class="comment">//指定编译某些文件</span></span><br><span class="line">    <span class="attr">&quot;liveSassCompile.settings.includeItems&quot;</span>: [</span><br><span class="line">        <span class="string">&quot;public/css/index.scss&quot;</span></span><br><span class="line">    ]</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
-
-<h2 id="编译（停止编译）文件"><a href="#编译（停止编译）文件" class="headerlink" title="编译（停止编译）文件"></a>编译（停止编译）文件</h2><blockquote>
-<p>ctrl + shift + p 输入Live Sass: Watch Sass开始进行实时编译，<br>                 输入Live Sass: Stop Watching Sass停止实时编译，<br>                 输入Live Sass: Compile Sass - Without Watch Mode进行一次编译<br>或者在vscode底部控制栏点击 watch sass进行编译</p>
-</blockquote>
-]]></content>
-      <categories>
-        <category>前端</category>
-      </categories>
-      <tags>
-        <tag>vscode</tag>
-        <tag>sass</tag>
       </tags>
   </entry>
 </search>
